@@ -1,0 +1,63 @@
+:root{
+--bg: #05060a;
+--card: rgba(18,20,30,0.6);
+--neon: #00eaff;
+--accent: rgba(0,234,255,0.12);
+--glass: rgba(255,255,255,0.04);
+--muted: #9aa8b2;
+}
+
+#emotionBadge h3 {
+    color: black !important;
+}
+
+
+* { box-sizing: border-box; }
+html,body{ height:100%; }
+body{
+margin:0;
+font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+background: radial-gradient(1200px 600px at 10% 10%, rgba(0,234,255,0.03), transparent),
+linear-gradient(180deg, #02030a 0%, #05060a 100%);
+color:#e6f7fb;
+}
+
+
+.app-header{ padding:18px 24px; border-bottom:1px solid rgba(255,255,255,0.02); }
+.logo-wrap{ display:flex; align-items:center; gap:14px; }
+.logo{ width:52px; height:52px; filter: drop-shadow(0 6px 18px rgba(0,234,255,0.12)); }
+.app-title{ margin:0; font-size:1.6rem; color:var(--neon); text-shadow:0 0 18px rgba(0,234,255,0.14); }
+
+
+.app-container{ max-width:1100px; margin:28px auto; padding:0 18px; }
+.neon-card{ background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:14px; padding:18px; box-shadow: 0 8px 28px rgba(0,0,0,0.6); border:1px solid rgba(0,234,255,0.06); }
+.section-title{ color:var(--neon); margin-bottom:10px; font-weight:600; }
+.divider{ border-color: rgba(0,234,255,0.06); }
+
+
+.form-control{ background: rgba(255,255,255,0.03); border:1px solid rgba(0,234,255,0.04); color: #e6f7fb; }
+.btn-neon{ background: linear-gradient(90deg, var(--neon), #35e3ff); color:#001217; font-weight:700; border-radius:10px; padding:12px 14px; border:none; box-shadow: 0 6px 28px rgba(0,234,255,0.12); }
+.btn-neon:hover{ transform: translateY(-2px); }
+
+
+.camera-wrap{ position:relative; background:var(--card); border-radius:10px; overflow:hidden; min-height:200px; display:flex; align-items:center; justify-content:center; }
+#camera{ width:100%; height:100%; object-fit:cover; background:#000; display:block; }
+.cam-controls{ display:flex; justify-content:flex-start; gap:8px; }
+
+
+.result-box{ background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:10px; border:1px solid rgba(0,234,255,0.04); min-height:220px; }
+#status{ color:var(--muted); }
+#emotionBadge h3{ margin:0; font-size:1.6rem; color:var(--neon); text-shadow: 0 6px 30px rgba(0,234,255,0.08); }
+
+
+#emotionBreakdown .list-group-item{ background:transparent; color:#dff6fb; border:1px dashed rgba(0,234,255,0.04); }
+#previewImage{ width:100%; max-height:260px; object-fit:contain; border-radius:8px; border:1px solid rgba(0,234,255,0.06); box-shadow: 0 8px 28px rgba(0,234,255,0.06); }
+
+
+/* Loading spinner */
+.loader{ width:48px; height:48px; border-radius:50%; border:4px solid rgba(0,234,255,0.12); border-top-color:var(--neon); animation:spin 1s linear infinite; margin:18px auto; }
+@keyframes spin{ to{ transform:rotate(360deg); } }
+
+
+/* Responsive */
+@media (max-width: 767px){ .logo{ width:44px; height:44px; } .app-title{ font-size:1.2rem; } .app-container{ padding:12px; } }
